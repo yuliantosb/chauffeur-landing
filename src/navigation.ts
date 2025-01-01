@@ -11,19 +11,19 @@ export const headerData = {
       links: [
         {
           text: 'Desktop',
-          href: getPermalink('/#features'),
+          href: getPermalink('/desktop', 'page'),
         },
         {
           text: 'E-Shop',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/eshop', 'page'),
         },
         {
           text: 'Booking',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/booking', 'page'),
         },
         {
           text: 'Mobile',
-          href: getPermalink('/about'),
+          href: getPermalink('/mobile', 'page'),
         },
       ],
     },
@@ -32,24 +32,25 @@ export const headerData = {
       links: [
         {
           text: 'Tips and Trick',
-          href: getBlogPermalink(),
+          href: getPermalink('tips-and-trick', 'tag'),
         },
         {
           text: 'Updates',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          href: getPermalink('updates', 'tag'),
         },
         {
           text: 'Information',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          href: getPermalink('information', 'tag'),
         },
       ],
     },
     {
       text: 'Documentation',
-      href: '#',
+      href: 'https://documentation.chauffeurpos.app',
+      target: '_blank',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Download', href: getPermalink('/desktop', 'page') }],
 };
 
 export const footerData = {
@@ -57,38 +58,38 @@ export const footerData = {
     {
       title: 'Products',
       links: [
-        { text: 'Desktop', href: '#' },
-        { text: 'E-Shop', href: '#' },
-        { text: 'Booking', href: '#' },
-        { text: 'Mobile', href: '#' },
-        { text: 'Desoktop (Docker)', href: '#' },
-        { text: 'E-Shop (Docker)', href: '#' },
-        { text: 'Booking (Docker)', href: '#' },
+        { text: 'Desktop', href: getPermalink('/desktop', 'page') },
+        { text: 'E-Shop', href: getPermalink('/eshop', 'page') },
+        { text: 'Booking', href: getPermalink('/booking', 'page') },
+        { text: 'Mobile', href: getPermalink('/mobile', 'page') },
+        { text: 'Desoktop (Docker)', href: getPermalink('/desktop#docker', 'page') },
+        { text: 'E-Shop (Docker)', href: getPermalink('/eshop#docker', 'page') },
+        { text: 'Booking (Docker)', href: getPermalink('/booking#docker', 'page') },
       ],
     },
     {
       title: 'Platform',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Hardware', href: '#' },
-        { text: 'Investor', href: '#' },
+        { text: 'Developer API', href: 'https://apidocs.chauffeurpos.app' },
+        { text: 'Partners', href: getPermalink('/partners', 'page') },
+        { text: 'Hardware', href: getPermalink('/hardware', 'page') },
+        { text: 'Investor', href: getPermalink('/investor', 'page') },
       ],
     },
     {
       title: 'Support',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Support 24h', href: '#' },
-        { text: 'Find Bugs', href: '#' },
+        { text: 'Docs', href: 'https://documentation.chauffeurpos.app', target: '_blank' },
+        { text: 'Support 24h', href: getPermalink('/support', 'page') },
+        { text: 'Find Bugs', href: getPermalink('/find-bugs', 'page') },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
+        { text: 'About', href: getPermalink('/about', 'page') },
+        { text: 'Blog', href: getPermalink('/blog', 'page') },
+        { text: 'Careers', href: getPermalink('/carrers', 'page') },
       ],
     },
   ],
@@ -97,7 +98,7 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/chauffeurposapp/' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
