@@ -70,7 +70,7 @@ export const footerData = {
     {
       title: 'Platform',
       links: [
-        { text: 'Developer API', href: 'https://apidocs.chauffeurpos.app' },
+        { text: 'Developer API', href: 'https://apidocs.chauffeurpos.app', target: '_blank' },
         { text: 'Partners', href: getPermalink('/partners', 'page') },
         { text: 'Hardware', href: getPermalink('/hardware', 'page') },
         { text: 'Investor', href: getPermalink('/investor', 'page') },
