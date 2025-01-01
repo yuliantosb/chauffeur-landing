@@ -12,30 +12,20 @@ import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
+import Hero1 from '~/assets/images/banner/hero1.jpg';
+import Feature1 from '~/assets/images/banner/feature1.jpg';
+import Feature2 from '~/assets/images/banner/feature2.jpg';
+import Feature3 from '~/assets/images/banner/feature3.jpg';
+import Feature4 from '~/assets/images/banner/feature4.jpg';
 
 const metadata = {
-  title: 'SaaS Landing Page',
+  title: 'Chauffeur POS - Drive Your Business Further',
 };
 ---
 
 <Layout metadata={metadata}>
   <Fragment slot="header">
-    <Header
-      {...headerData}
-      actions={[
-        {
-          variant: 'secondary',
-          text: 'Login',
-          href: '#',
-        },
-        {
-          variant: 'primary',
-          text: 'Sign Up',
-          href: '#',
-        },
-      ]}
-      isSticky
-    />
+    <Header {...headerData} isSticky showToggleTheme />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
@@ -47,22 +37,20 @@ const metadata = {
       { text: 'Learn more', href: '#features' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
+      src: Hero1,
+      alt: 'Chauffeur POS App',
     }}
   >
     <Fragment slot="title">
-      Revolutionize <br />Your<span class="text-accent dark:text-white highlight"
-        > Point of Sale</span
-      > Experience<br />
+      Revolutionize <br />Your<span class="text-accent dark:text-white highlight"> Point of Sale</span> Experience<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Our all-in-one POS solution provides seamless integration across platforms to enhance your business efficiency. From <span class="font-bold">sales to HR management</span>, we have it all covered.
-        Elevate your website creation process with</span
+        Our all-in-one POS solution provides seamless integration across platforms to enhance your business efficiency.
+        From <span class="font-bold">sales to HR management</span>, we have it all covered. Elevate your website
+        creation process with</span
       >
-      
     </Fragment>
   </Hero2>
 
@@ -76,8 +64,7 @@ const metadata = {
     items={[
       {
         title: 'On-Premise Installation',
-        description:
-          'Complete control of your POS system on your own servers.',
+        description: 'Complete control of your POS system on your own servers.',
         icon: 'tabler:server-bolt',
       },
       {
@@ -87,8 +74,7 @@ const metadata = {
       },
       {
         title: 'HRIS Functionality',
-        description:
-          'Manage employee data, payroll, and attendance with ease.',
+        description: 'Manage employee data, payroll, and attendance with ease.',
         icon: 'tabler:sitemap',
       },
       {
@@ -112,28 +98,27 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    title="Use cases"
-    subtitle="Discover how AstroWind's versatile template serves as the ideal solution for various use cases, providing tailored solutions to drive success."
+    title="Our Features"
+    subtitle="Explore how Chauffeur POS can transform your operations across various industries and use cases."
     isReversed
     items={[
       {
-        title: 'Description:',
-        description:
-          'Are you a startup with big dreams? AstroWind propels your success. Our template forges a seamless online presence, attracting investors and customers from day one. Astro 5.0 and Tailwind CSS ensure striking, responsive sites, leaving lasting impressions. Countless startups leverage AstroWind to kickstart their journey and resonate with audiences.',
+        title: 'Why On-Premise?',
+        description: `Total Control Over Your Environment Manage and monitor your data infrastructure within your premises, allowing for customization, enhanced security protocols, and faster troubleshooting without reliance on external services.`,
       },
       {
-        title: 'Benefits:',
-        description: `Allow startups to quickly create professional websites without investing extensive time and resources. <br /> Make a memorable first impression with visually appealing design elements that highlight your startup's unique value proposition. <br /> Ensures your website looks stunning and works well on all devices. <br /> Engage potential investors and customers with engaging content, clear messaging, and intuitive navigation.`,
+        title: 'Why It Matters?',
+        description: `Data Privacy and Ownership Your business data is private and accessible only to you. With no external interference, you can guarantee compliance with data protection standards and ensure the integrity of your operations.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
-      alt: 'Startup Image',
+      src: Feature1,
+      alt: 'On Premise Image',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Startup success stories: <br /><span class="text-2xl">Launching with AstroWind</span>
+        On-Premise Installation: <br /><span class="text-2xl">Take Full Control of Your Data</span>
       </h3>
     </Fragment>
 
@@ -148,22 +133,22 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 5.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
+        title: 'Why E-Shop Integration?',
+        description: `Expand Your Business Reach Cater to online shoppers and boost sales by providing multiple channels for purchasing your products.`,
       },
       {
-        title: 'Benefits:',
-        description: `Ensuring a cohesive and user-centric design for your SaaS website. <br /> Effectively communicate complex SaaS features through visual aids, animations, and interactive elements. <br /> Prioritize user needs and pain points through well-structured layouts and clear navigation. <br /> Encourage visitors to take action with strategically placed CTAs. <br /> Ensures your SaaS website works seamlessly across all devices.`,
+        title: 'Why It Matters?:',
+        description: `Convenience and Efficiency Customers can shop from anywhere, while your team benefits from reduced checkout queues and streamlined order management.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
-      alt: 'SaaS Businesses Image',
+      src: Feature2,
+      alt: 'Eshop Intergration',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        SaaS showcase: <br /><span class="text-2xl">Streamlining user experience</span>
+        E-Shop Integration: <br /><span class="text-2xl">Seamless Online Shopping Experience</span>
       </h3>
     </Fragment>
 
@@ -179,22 +164,22 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
-        description: `Your portfolio is your masterpiece, and AstroWind is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, AstroWind empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, AstroWind's templates offer a visually immersive experience that lets your portfolio shine.`,
+        title: 'Why HRIS Functionality?',
+        description: `Streamline HR Tasks Reduce administrative burdens and allow managers to focus on strategic operations.`,
       },
       {
-        title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
+        title: 'Why It Matters?',
+        description: `Empowered Workforce Management Keep employees satisfied with accurate and timely payroll while maintaining compliance with labor regulations.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: Feature3,
       alt: 'Portfolio Image',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Creative portfolios: <br /><span class="text-2xl">Highlighting your work</span>
+        HRIS Functionality: <br /><span class="text-2xl">Simplified Employee Management</span>
       </h3>
     </Fragment>
 
@@ -208,22 +193,22 @@ const metadata = {
   <Content
     items={[
       {
-        title: 'Description:',
-        description: `For small businesses, a well-crafted website can be a game-changer. AstroWind empowers small businesses to not only establish a credible online presence but also convert visitors into loyal customers. The template's thoughtful design and optimization features ensure that your website doesn't just attract attention but also guides visitors through a seamless journey, ultimately leading to conversions.`,
+        title: 'Why Multi-Device Installation?',
+        description: `Adaptable to Your Business Needs Whether in the office or on the go, access the POS system from any device to keep your business running smoothly.`,
       },
       {
-        title: 'Benefits:',
-        description: `Present your small business with a professional and polished website that instills confidence and trust among visitors. <br /> Strategically placed CTAs, user-friendly forms, and optimized layouts work together to drive user engagement and conversions. <br /> Ensure a smooth browsing experience, reducing bounce rates and encouraging interaction.`,
+        title: 'Why It Matters?',
+        description: `Enhanced Mobility and Productivity Empower your team with the flexibility to work from anywhere, ensuring uninterrupted operations.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Small Business Image',
+      src: Feature4,
+      alt: 'Multiple Device',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Small business growth: <br /><span class="text-2xl">Converting visitors into customers</span>
+        Multi-Device Installation: <br /><span class="text-2xl">Flexibility Across Devices</span>
       </h3>
     </Fragment>
 
@@ -235,27 +220,27 @@ const metadata = {
   <!-- Pricing Widget ******************* -->
 
   <Pricing
-    title="Flexible pricing plans"
+    title="Monthly subscribe and cancel anytime"
     prices={[
       {
         title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
+        subtitle: 'Basic POS feature',
         price: '0',
         period: '/ month',
         callToAction: {
           target: '_blank',
-          text: 'Get Started for Free',
+          text: 'Download it now',
           href: '#',
         },
       },
       {
-        title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
+        title: 'premium',
+        subtitle: 'Advanced POS feature',
         price: 350000,
         period: '/ Month',
         callToAction: {
           target: '_blank',
-          text: 'Upgrade to Pro',
+          text: 'Try Premium 30 days for free',
           href: '#',
         },
         hasRibbon: true,
@@ -270,25 +255,25 @@ const metadata = {
     title="Frequently Asked Questions"
     items={[
       {
-        title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
+        title: 'How does the payment work?',
         description:
-          'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
+          'You can pay with a monthly subscription. If the subscription expires, the system will revert to the basic plan until a new payment is made. Users can also extend their subscription before expiration to maintain access to all features.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Can I use AstroWind for both personal and commercial projects?',
-        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
+        title: 'How do I cancel my subscription?',
+        description: `If you don’t renew your subscription, it will automatically end without additional charges.`,
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'What level of coding knowledge is required to use AstroWind?',
+        title: 'Can I try the product before paying?',
         description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
+          'Yes, our Free Plan offers basic functionality for you to explore and evaluate the product. Additionally, new users receive a 30-day free premium trial after downloading the app to experience all features',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Is customer support available for AstroWind users seeking guidance?',
-        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
+        title: 'How many devices can I use with one license?',
+        description: `One license allows installation on multiple devices, making it perfect for scaling your operations.`,
         icon: 'tabler:chevrons-right',
       },
     ]}
@@ -305,23 +290,23 @@ const metadata = {
     subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
     callToAction={{
       text: 'Contact us',
-      href: '/',
+      href: 'mailto://hello@chauffeurpos.app',
     }}
     items={[
       {
         title: 'Email us',
-        description: 'contact@support.com',
+        description: 'hello@chauffeurpos.app',
         icon: 'tabler:mail',
       },
       {
-        title: 'Call us',
-        description: '+1 (234) 567-890',
+        title: 'Call us (Whatsapp)',
+        description: '+62 896-1108-1675',
         icon: 'tabler:headset',
       },
       {
         title: 'Follow us',
-        description: '@example',
-        icon: 'tabler:brand-twitter',
+        description: '@chauffeurposapp',
+        icon: 'tabler:brand-instagram',
       },
     ]}
   />
@@ -330,8 +315,8 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with AstroWind's blog"
-    information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
+    title="Stay informed with Chauffeur's blog"
+    information={`Tips and trick, updates and other information`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -346,16 +331,16 @@ const metadata = {
       {
         testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
         name: 'Cary Kennedy',
-        job: 'Film director',
+        job: 'Babyhappy.id',
         image: {
           src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
           alt: 'Cary Kennedy Image',
         },
       },
       {
-        testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
+        testimonial: `This POS system transformed the way we operate. The multi-shop management and E-shop features are game changers!`,
         name: 'Josh Wilkinson',
-        job: 'Product Manager',
+        job: 'Hanna&Co.',
         image: {
           src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
           alt: 'Josh Wilkinson Image',
@@ -363,9 +348,9 @@ const metadata = {
       },
       {
         testimonial:
-          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+          'The multi-device installation is a lifesaver. Our team can seamlessly work across web, desktop, and mobile platforms.',
         name: 'Sidney Hansen',
-        job: 'Decorator',
+        job: 'Butiquest.co',
         image: {
           src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
           alt: 'Sidney Hansen Image',
@@ -373,5 +358,4 @@ const metadata = {
       },
     ]}
   />
-
 </Layout>
