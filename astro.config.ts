@@ -69,6 +69,12 @@ export default defineConfig({
     astrowind({
       config: './src/config.yaml',
     }),
+
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
   ],
 
   image: {
