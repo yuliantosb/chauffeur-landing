@@ -8,7 +8,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 
-import { headerData } from '~/navigation';
+import { headerDataId, footerDataId } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
@@ -17,24 +17,30 @@ import Feature1 from '~/assets/images/banner/feature1.jpg';
 import Feature2 from '~/assets/images/banner/feature2.jpg';
 import Feature3 from '~/assets/images/banner/feature3.jpg';
 import Feature4 from '~/assets/images/banner/feature4.jpg';
+import Footer from '~/components/widgets/Footer.astro';
 
 const metadata = {
   title: 'Drive Your Business Further',
 };
+
+const i18n = {
+  language: 'id',
+  textDirection: 'ltr',
+};
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} i18n={i18n}>
   <Fragment slot="header">
-    <Header {...headerData} isSticky showToggleTheme />
+    <Header {...headerDataId} isSticky showToggleTheme />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Drive your business further"
+    tagline="Bawa bisnismu melaju lebih jauh"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', target: '_blank', text: 'Mulai Jelajahi', href: 'https://github.com/onwidget/astrowind' },
+      { text: 'Pelajari Lebih Lanjut', href: '#features' },
     ]}
     image={{
       src: Hero1,
@@ -42,13 +48,13 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Revolutionize <br />Your<span class="text-accent dark:text-white highlight"> Point of Sale</span> Experience<br />
+      Revolusi <br /> dalam Pengalaman <span class="text-accent dark:text-white highlight">Point of Sale</span>-mu
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Our all-in-one POS solution provides seamless integration across platforms to enhance your business efficiency.
-        From <span class="font-bold">sales to HR management</span>, we have it all covered.</span
+        Solusi POS all-in-one kami menghadirkan integrasi lintas platform yang mulus untuk meningkatkan efisiensi
+        bisnismu. Mulai dari <span class="font-bold">penjualan hingga manajemen SDM</span>, semua sudah kami siapkan.</span
       >
     </Fragment>
   </Hero2>
@@ -57,47 +63,57 @@ const metadata = {
 
   <Features
     id="features"
-    title="What We Offer?"
-    subtitle="Discover Our Key Benefits"
+    title="Apa Saja yang Kami Tawarkan?"
+    subtitle="Temukan Keunggulan Utama Kami"
     columns={2}
     items={[
       {
-        title: 'On-Premise Installation',
-        description: 'Complete control of your POS system on your own servers.',
+        title: 'Instalasi On-Premise',
+        description: 'Kendalikan sistem POS sepenuhnya di server milik Anda sendiri.',
         icon: 'tabler:server-bolt',
       },
       {
-        title: 'Platform Compatibility',
-        description: `Available on web, desktop, and mobile platforms for ultimate flexibility.`,
+        title: 'Kompatibel di Berbagai Platform',
+        description: `Tersedia di web, desktop, dan mobile untuk fleksibilitas maksimal.`,
         icon: 'tabler:devices',
       },
       {
-        title: 'HRIS Functionality',
-        description: 'Manage employee data, payroll, and attendance with ease.',
+        title: 'Fitur HRIS',
+        description: 'Kelola data karyawan, penggajian, dan absensi dengan mudah.',
         icon: 'tabler:sitemap',
       },
       {
-        title: 'Multi-Shop Management',
-        description: `Control multiple shops from one centralized system.`,
+        title: 'Manajemen Multi-Toko',
+        description: `Pantau dan kelola banyak cabang dari satu sistem terpusat.`,
         icon: 'tabler:shopping-bag',
       },
+      //   {
+      //     title: 'E-Shop Integration',
+      //     description: ` Offer self-checkout with delivery or pickup options.`,
+      //     icon: 'tabler:world-www',
+      //   },
+      //   {
+      //     title: 'Multi-Device Installation',
+      //     description: `Install the software on multiple devices with just one license.`,
+      //     icon: 'tabler:affiliate',
+      //   },
     ]}
   />
 
   <!-- Content Widget **************** -->
 
   <Content
-    title="Our Features"
-    subtitle="Explore how Chauffeur POS can transform your operations across various industries and use cases."
+    title="Fitur Unggulan Kami"
+    subtitle="Jelajahi bagaimana Chauffeur POS dapat mentransformasi operasional bisnismu di berbagai industri dan skenario penggunaan."
     isReversed
     items={[
       {
-        title: 'Why On-Premise?',
-        description: `Total Control Over Your Environment Manage and monitor your data infrastructure within your premises, allowing for customization, enhanced security protocols, and faster troubleshooting without reliance on external services.`,
+        title: 'Kenapa On-Premise?',
+        description: `Kelola dan pantau infrastruktur data langsung di lokasi, memungkinkan kustomisasi, keamanan yang lebih tinggi, dan penanganan masalah yang lebih cepat tanpa tergantung layanan eksternal.`,
       },
       {
-        title: 'Why It Matters?',
-        description: `Data Privacy and Ownership Your business data is private and accessible only to you. With no external interference, you can guarantee compliance with data protection standards and ensure the integrity of your operations.`,
+        title: 'Kenapa Ini Penting?',
+        description: `Data bisnismu bersifat pribadi dan hanya bisa diakses olehmu. Tanpa campur tangan pihak luar, kamu bisa memastikan kepatuhan terhadap standar perlindungan data dan menjaga integritas operasional.`,
       },
     ]}
     image={{
@@ -107,7 +123,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        On-Premise Installation: <br /><span class="text-2xl">Take Full Control of Your Data</span>
+        Instalasi On-Premise: <br /><span class="text-2xl">Kendalikan Sepenuhnya Data Bisnismu</span>
       </h3>
     </Fragment>
 
@@ -122,12 +138,12 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Why flexible subscription?',
-        description: `Because every business has different rhythms. Whether you're scaling fast or just starting out, our pricing adapts to your pace—no long-term contracts, no pressure.`,
+        title: 'Kenapa berlangganan fleksibel?',
+        description: `Karena setiap bisnis punya ritmenya sendiri. Mau kamu baru mulai atau sedang berkembang pesat, harga kami menyesuaikan kebutuhanmu—tanpa kontrak jangka panjang, tanpa tekanan.`,
       },
       {
-        title: 'Why It Matters?:',
-        description: `You stay in control. Pay only when you need it, pause when you don't. It’s freedom that fits your workflow, not the other way around.`,
+        title: 'Kenapa Ini Penting?',
+        description: `Bayar hanya saat dibutuhkan, jeda kapan saja. Kebebasan yang mengikuti alur kerja kamu, bukan sebaliknya.`,
       },
     ]}
     image={{
@@ -137,7 +153,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Flexible Subscription Fee: <br /><span class="text-2xl">Cancel anytime. No strings attached.</span>
+        Biaya Berlangganan Fleksibel: <br /><span class="text-2xl">Bisa dibatalkan kapan saja. Tanpa komitmen.</span>
       </h3>
     </Fragment>
 
@@ -153,12 +169,12 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Why HRIS Functionality?',
-        description: `Streamline HR Tasks Reduce administrative burdens and allow managers to focus on strategic operations.`,
+        title: 'Kenapa Fitur HRIS?',
+        description: `Kurangi beban administratif agar manajer bisa fokus ke strategi dan pengembangan tim.`,
       },
       {
-        title: 'Why It Matters?',
-        description: `Empowered Workforce Management Keep employees satisfied with accurate and timely payroll while maintaining compliance with labor regulations.`,
+        title: 'Kenapa Ini Penting?',
+        description: `Pastikan kepuasan karyawan dengan penggajian yang akurat dan tepat waktu, sekaligus tetap patuh pada regulasi ketenagakerjaan.`,
       },
     ]}
     image={{
@@ -168,7 +184,9 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        HRIS Functionality: <br /><span class="text-2xl">Simplified Employee Management</span>
+        Fitur HRIS (Human Resource Information System): <br /><span class="text-2xl"
+          >Manajemen Karyawan Jadi Lebih Sederhana</span
+        >
       </h3>
     </Fragment>
 
@@ -182,12 +200,12 @@ const metadata = {
   <Content
     items={[
       {
-        title: 'Why Multi-Device Installation?',
-        description: `Adaptable to Your Business Needs Whether in the office or on the go, access the POS system from any device to keep your business running smoothly.`,
+        title: 'Kenapa Multi-Perangkat?',
+        description: `Baik di kantor maupun di lapangan, akses sistem POS dari perangkat mana pun untuk menjaga kelancaran operasional.`,
       },
       {
-        title: 'Why It Matters?',
-        description: `Enhanced Mobility and Productivity Empower your team with the flexibility to work from anywhere, ensuring uninterrupted operations.`,
+        title: 'Kenapa Ini Penting?',
+        description: `Berikan timmu keleluasaan untuk bekerja dari mana saja, tanpa mengganggu jalannya bisnis.`,
       },
     ]}
     image={{
@@ -197,7 +215,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Multi-Device Installation: <br /><span class="text-2xl">Flexibility Across Devices</span>
+        Instalasi Multi-Perangkat: <br /><span class="text-2xl">Fleksibel di Berbagai Perangkat</span>
       </h3>
     </Fragment>
 
@@ -209,31 +227,31 @@ const metadata = {
   <!-- Pricing Widget ******************* -->
 
   <Pricing
-    title="Monthly subscribe and cancel anytime"
+    title="Langganan bulanan, batalkan kapan saja"
     prices={[
       {
-        title: 'free',
-        subtitle: 'Basic POS feature',
+        title: 'gratis',
+        subtitle: 'Fitur POS Dasar',
         price: '0',
-        period: '/ month',
+        period: '/ bulan',
         callToAction: {
           target: '_blank',
-          text: 'Download it now',
+          text: 'Unduh sekarang',
           href: '#',
         },
       },
       {
         title: 'premium',
-        subtitle: 'Advanced POS feature',
+        subtitle: 'Fitur POS Lanjutan',
         price: 350000,
-        period: '/ Month',
+        period: '/ bulan',
         callToAction: {
           target: '_blank',
-          text: 'Try Premium 30 days for free',
+          text: 'Coba Premium gratis selama 30 hari',
           href: '#',
         },
         hasRibbon: true,
-        ribbonTitle: 'popular',
+        ribbonTitle: 'populer',
       },
     ]}
   />
@@ -241,28 +259,28 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
+    title="Pertanyaan yang Sering Diajukan"
     items={[
       {
-        title: 'How does the payment work?',
+        title: 'Bagaimana sistem pembayarannya?',
         description:
-          'You can pay with a monthly subscription. If the subscription expires, the system will revert to the basic plan until a new payment is made. Users can also extend their subscription before expiration to maintain access to all features.',
+          'Anda dapat berlangganan secara bulanan. Jika masa aktif langganan berakhir, sistem akan otomatis kembali ke paket dasar hingga pembayaran diperbarui. Anda juga bisa memperpanjang langganan sebelum masa berakhir agar akses ke semua fitur tetap terjaga.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'How do I cancel my subscription?',
-        description: `If you don’t renew your subscription, it will automatically end without additional charges.`,
+        title: 'Bagaimana cara membatalkan langganan?',
+        description: `Jika Anda tidak memperbarui langganan, layanan akan berhenti secara otomatis tanpa biaya tambahan.`,
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Can I try the product before paying?',
+        title: 'Apakah saya bisa mencoba produk sebelum membayar?',
         description:
-          'Yes, our Free Plan offers basic functionality for you to explore and evaluate the product. Additionally, new users receive a 30-day free premium trial after downloading the app to experience all features',
+          'Ya, kami menyediakan Paket Gratis dengan fitur dasar yang bisa Anda gunakan untuk eksplorasi awal. Selain itu, pengguna baru akan mendapatkan uji coba Premium gratis selama 30 hari setelah mengunduh aplikasi untuk merasakan semua fiturnya.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'How many devices can I use with one license?',
-        description: `One license allows installation on multiple devices, making it perfect for scaling your operations.`,
+        title: 'Berapa banyak perangkat yang bisa digunakan dengan satu lisensi?',
+        description: `Satu lisensi dapat digunakan di beberapa perangkat sekaligus, cocok untuk mendukung operasional bisnis yang terus berkembang.`,
         icon: 'tabler:chevrons-right',
       },
     ]}
@@ -275,10 +293,10 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Reach out to us"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+    title="Hubungi Kami"
+    subtitle="Punya pertanyaan? Jangan ragu untuk menghubungi kami melalui formulir di bawah ini. Kami siap membantu!"
     callToAction={{
-      text: 'Contact us',
+      text: 'Kontak Kami',
       href: 'mailto://hello@chauffeurpos.app',
     }}
     items={[
@@ -288,12 +306,12 @@ const metadata = {
         icon: 'tabler:mail',
       },
       {
-        title: 'Call us (Whatsapp)',
+        title: 'Hubungi kami (Whatsapp)',
         description: '+62 896-1108-1675',
         icon: 'tabler:headset',
       },
       {
-        title: 'Follow us',
+        title: 'Ikuti Kami',
         description: '@chauffeurposapp',
         icon: 'tabler:brand-instagram',
       },
@@ -304,8 +322,9 @@ const metadata = {
 
   <BlogLatestPosts
     id="blog"
-    title="Stay informed with Chauffeur's blog"
-    information={`Tips and trick, updates and other information`}
+    title="Selalu Update dengan Blog Chauffeur"
+    information={`Tips & trik, pembaruan fitur, dan info menarik lainnya seputar dunia POS.`}
+    linkText="Lihat semua artikel "
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -347,4 +366,7 @@ const metadata = {
       },
     ]}
   /> -->
+  <Fragment slot="footer">
+    <Footer {...footerDataId} />
+  </Fragment>
 </Layout>

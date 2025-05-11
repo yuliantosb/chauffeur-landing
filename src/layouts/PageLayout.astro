@@ -6,16 +6,17 @@ import Announcement from '~/components/widgets/Announcement.astro';
 
 import { headerData, footerData } from '~/navigation';
 
-import type { MetaData } from '~/types';
+import type { MetaData, I18N } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  i18n?: I18N;
 }
 
-const { metadata } = Astro.props;
+const { metadata, i18n } = Astro.props;
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} i18n={i18n}>
   <slot name="announcement">
     <Announcement />
   </slot>
