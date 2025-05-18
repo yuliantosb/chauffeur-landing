@@ -43,7 +43,6 @@ const generatePermalink = async ({
 const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
   const { id, data } = post;
   const { Content, remarkPluginFrontmatter } = await render(post);
-
   const {
     publishDate: rawPublishDate = new Date(),
     updateDate: rawUpdateDate,
@@ -55,6 +54,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     author,
     draft = false,
     metadata = {},
+    lang,
   } = data;
 
   const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
@@ -97,6 +97,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     // or 'content' in case you consume from API
 
     readingTime: remarkPluginFrontmatter?.readingTime,
+    lang,
   };
 };
 
@@ -166,11 +167,10 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 };
 
 /** */
-export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
+export const findLatestPosts = async ({ count, lang }: { count?: number; lang?: string }): Promise<Array<Post>> => {
   const _count = count || 4;
   const posts = await fetchPosts();
-
-  return posts ? posts.slice(0, _count) : [];
+  return posts ? posts.filter((post) => post.lang === lang).slice(0, _count) : [];
 };
 
 /** */
@@ -188,6 +188,7 @@ export const getStaticPathsBlogPost = async () => {
   return (await fetchPosts()).flatMap((post) => ({
     params: {
       blog: post.permalink,
+      lang: post?.lang,
     },
     props: { post },
   }));

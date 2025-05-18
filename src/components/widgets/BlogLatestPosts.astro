@@ -15,6 +15,7 @@ export interface Props extends Widget {
   linkUrl?: string | URL;
   information?: string;
   count?: number;
+  lang?: string;
 }
 
 const {
@@ -28,9 +29,10 @@ const {
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
+  lang = 'en',
 } = Astro.props;
 
-const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
+const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count, lang }) : [];
 ---
 
 {

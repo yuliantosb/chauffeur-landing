@@ -41,15 +41,6 @@ const { metadata = {}, i18n: { language, textDirection } = { language: 'en', tex
     <slot />
 
     <BasicScripts />
-    <script>
-      const pathname = window.location.pathname;
-
-      if (!pathname.startsWith('/id') && !pathname.startsWith('/en')) {
-        const userLang = navigator.language;
-        const langCode = userLang.startsWith('id') ? 'id' : 'en';
-        window.location.replace(`/${langCode}`);
-      }
-    </script>
     <!-- Google tag (gtag.js) -->
     <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-1Q3Z6DC7S2"></script>
     <script type="text/partytown">
