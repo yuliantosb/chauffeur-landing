@@ -10,21 +10,14 @@ export const headerData = {
       text: 'Products',
       links: [
         {
-          text: 'Desktop',
-          href: getPermalink('/desktop', 'page'),
+          text: 'POS',
+          href: getPermalink('/en/pos', 'page'),
         },
-        {
-          text: 'E-Shop',
-          href: getPermalink('/eshop', 'page'),
-        },
-        {
-          text: 'Booking',
-          href: getPermalink('/booking', 'page'),
-        },
-        {
-          text: 'Mobile',
-          href: getPermalink('/mobile', 'page'),
-        },
+        { text: 'Kiosk', href: getPermalink('/en/kiosk', 'page') },
+        { text: 'Self-Checkout', href: getPermalink('/en/self-checkout', 'page') },
+        { text: 'Eshop', href: getPermalink('/en/eshop', 'page') },
+        { text: 'Booking', href: getPermalink('/en/booking', 'page') },
+        { text: 'Mobile', href: getPermalink('/en/mobile', 'page') },
       ],
     },
     {
@@ -50,7 +43,7 @@ export const headerData = {
       target: '_blank',
     },
   ],
-  actions: [{ text: 'Download', href: getPermalink('/desktop', 'page') }],
+  actions: [{ text: 'Download', href: getPermalink('/en/pos', 'page') }],
 };
 
 export const footerData = {
@@ -58,37 +51,37 @@ export const footerData = {
     {
       title: 'Products',
       links: [
-        { text: 'POS', href: getPermalink('/pos', 'page') },
-        { text: 'Kiosk', href: getPermalink('/kiosk', 'page') },
-        { text: 'Self-Checkout', href: getPermalink('/self-checkout', 'page') },
-        { text: 'Eshop', href: getPermalink('/eshop', 'page') },
-        { text: 'Booking', href: getPermalink('/booking', 'page') },
-        { text: 'Mobile', href: getPermalink('/mobile', 'page') },
+        { text: 'POS', href: getPermalink('/en/pos', 'page') },
+        { text: 'Kiosk', href: getPermalink('/en/kiosk', 'page') },
+        { text: 'Self-Checkout', href: getPermalink('/en/self-checkout', 'page') },
+        { text: 'Eshop', href: getPermalink('/en/eshop', 'page') },
+        { text: 'Booking', href: getPermalink('/en/booking', 'page') },
+        { text: 'Mobile', href: getPermalink('/en/mobile', 'page') },
       ],
     },
     {
       title: 'Platform',
       links: [
         { text: 'Developer API', href: 'https://apidocs.chauffeurpos.app', target: '_blank' },
-        { text: 'Partners', href: getPermalink('/partners', 'page') },
-        { text: 'Hardware', href: getPermalink('/hardware', 'page') },
-        { text: 'Investor', href: getPermalink('/investor', 'page') },
+        { text: 'Partners', href: getPermalink('/en/partners', 'page') },
+        { text: 'Hardware', href: getPermalink('/en/hardware', 'page') },
+        { text: 'Investor', href: getPermalink('/en/investor', 'page') },
       ],
     },
     {
       title: 'Support',
       links: [
         { text: 'Docs', href: 'https://documentation.chauffeurpos.app', target: '_blank' },
-        { text: 'Support 24h', href: getPermalink('/support', 'page') },
-        { text: 'Find Bugs', href: getPermalink('/find-bugs', 'page') },
+        { text: 'Support 24h', href: getPermalink('/en/support', 'page') },
+        { text: 'Find Bugs', href: getPermalink('/en/find-bugs', 'page') },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: getPermalink('/about', 'page') },
-        { text: 'Blog', href: getPermalink('/blog', 'page') },
-        { text: 'Careers', href: getPermalink('/carrers', 'page') },
+        { text: 'About', href: getPermalink('/en/about', 'page') },
+        { text: 'Blog', href: getPermalink('/en/blog', 'page') },
+        { text: 'Careers', href: getPermalink('/en/carrers', 'page') },
       ],
     },
   ],
@@ -117,27 +110,27 @@ export const headerDataId = {
       links: [
         {
           text: 'POS',
-          href: getPermalink('/pos', 'page'),
+          href: getPermalink('/id/pos', 'page'),
         },
         {
           text: 'Kiosk',
-          href: getPermalink('/kiosk', 'page'),
+          href: getPermalink('/id/kiosk', 'page'),
         },
         {
           text: 'Self-Checkout',
-          href: getPermalink('/self-checkout', 'page'),
+          href: getPermalink('/id/self-checkout', 'page'),
         },
         {
           text: 'Eshop',
-          href: getPermalink('/eshop', 'page'),
+          href: getPermalink('/id/eshop', 'page'),
         },
         {
           text: 'Booking',
-          href: getPermalink('/booking', 'page'),
+          href: getPermalink('/id/booking', 'page'),
         },
         {
           text: 'Mobile',
-          href: getPermalink('/mobile', 'page'),
+          href: getPermalink('/id/mobile', 'page'),
         },
       ],
     },
@@ -146,7 +139,7 @@ export const headerDataId = {
       links: [
         {
           text: 'Tips dan Trik',
-          href: getPermalink('tips-dan-trikk', 'tag'),
+          href: getPermalink('tips-dan-trik', 'tag'),
         },
         {
           text: 'Pembaruan',
@@ -164,7 +157,7 @@ export const headerDataId = {
       target: '_blank',
     },
   ],
-  actions: [{ text: 'Unduh', href: getPermalink('/pos', 'page') }],
+  actions: [{ text: 'Unduh', href: getPermalink('/id/pos', 'page') }],
 };
 
 export const footerDataId = {
@@ -172,21 +165,21 @@ export const footerDataId = {
     {
       title: 'Produk',
       links: [
-        { text: 'POS', href: getPermalink('/pos', 'page') },
-        { text: 'Kiosk', href: getPermalink('/kiosk', 'page') },
-        { text: 'Self-Checkout', href: getPermalink('/self-checkout', 'page') },
-        { text: 'Eshop', href: getPermalink('/eshop', 'page') },
-        { text: 'Booking', href: getPermalink('/booking', 'page') },
-        { text: 'Mobile', href: getPermalink('/mobile', 'page') },
+        { text: 'POS', href: getPermalink('/id/pos', 'page') },
+        { text: 'Kiosk', href: getPermalink('/id/kiosk', 'page') },
+        { text: 'Self-Checkout', href: getPermalink('/id/self-checkout', 'page') },
+        { text: 'Eshop', href: getPermalink('/id/eshop', 'page') },
+        { text: 'Booking', href: getPermalink('/id/booking', 'page') },
+        { text: 'Mobile', href: getPermalink('/id/mobile', 'page') },
       ],
     },
     {
       title: 'Platform',
       links: [
         { text: 'API Pengembang', href: 'https://apidocs.chauffeurpos.app', target: '_blank' },
-        { text: 'Mitra', href: getPermalink('/partners', 'page') },
-        { text: 'Hardware', href: getPermalink('/hardware', 'page') },
-        { text: 'Investor', href: getPermalink('/investor', 'page') },
+        { text: 'Mitra', href: getPermalink('/id/mitra', 'page') },
+        { text: 'Hardware', href: getPermalink('/id/hardware', 'page') },
+        { text: 'Investor', href: getPermalink('/id/investor', 'page') },
       ],
     },
     {

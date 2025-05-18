@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: 'Unduh Chauffeur POS',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    tagline="Unduh Chauffeur POS"
+    title="Unduh dan mulai bisnis mu sekarang"
+    subtitle="Mulai dan Pelajari Chauffeur POS dan mulai bisnis anda segera"
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'Windows',
+        href: 'https://drive.google.com/file/d/1rnXtG0kR5CJqsNHzXXK5vUWmzzzPayke/view?usp=drive_link',
+        icon: 'tabler:brand-windows',
+      },
+      {
+        variant: 'secondary',
+        text: 'Ubuntu',
+        href: 'https://drive.google.com/file/d/191Whf3v71V5QxygOehKbJdggVpUx3B7I/view?usp=drive_link',
+        icon: 'tabler:brand-ubuntu',
+      },
+    ]}
+  />
+</Layout>
